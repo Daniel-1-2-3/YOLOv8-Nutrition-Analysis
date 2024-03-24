@@ -1,0 +1,11 @@
+path: /kaggle/input/basefbreakfast
+train: Dataset/train
+val: Dataset/valid
+test: Dataset/test
+
+names:
+  0: Bacon 
+  1: Bagel
+  2: Banana
+  3: Bread 
+  4: Egg
