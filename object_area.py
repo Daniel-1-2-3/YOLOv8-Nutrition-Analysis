@@ -31,15 +31,15 @@ class mask_areas:
 
     def picture(self, name):
         #Generate labeled picture
-        self.model(self.image_path, conf = 0.3, save = True, project = "C:\\Daniel\\Nutrition YOLO\\yolov8n-seg_picture-result")
-        img = cv2.imread(f"C:\\Daniel\\Nutrition YOLO\\yolov8n-seg_picture-result\\predict\\{name}")
+        self.model(self.image_path, conf = 0.3, save = True, project = "C:\\Daniel\\Python\\Nutrition YOLO\\yolov8n-seg_picture-result")
+        img = cv2.imread(f"C:\\Daniel\\Python\\Nutrition YOLO\\yolov8n-seg_picture-result\\predict\\{name}")
         cv2.imshow('Result of Instance Segmentation', img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
         
     def plot_masks(self, show):    
          #Load pre-trained model to generate labeled picture
-        results = self.model(self.image_path, save = False, project = "C:\\Daniel\\Nutrition YOLO\\yolov8n-seg_picture-result")
+        results = self.model(self.image_path, save = False, project = "C:\\Daniel\\Python\\Nutrition YOLO\\yolov8n-seg_picture-result")
         result = results[0] #result is a list that contains information about each object detected
         
         #scale the axis in matplotlib
@@ -111,7 +111,7 @@ if __name__ == "__main__":
     trainer = train()
     model = trainer.get_model()
     image = str(input("Enter image name (include .jpg): "))
-    image_dir = 'C:\\Daniel\\Nutrition YOLO\\Training_files\\Raw_imgs\\' + image
+    image_dir = 'C:\\Daniel\\Python\\Nutrition YOLO\\Training_files\\Raw_imgs\\' + image
     mask_areas = mask_areas(model, image_dir)
     mask_areas.picture()
     print(mask_areas.predict())
