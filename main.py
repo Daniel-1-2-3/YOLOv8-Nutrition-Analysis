@@ -65,7 +65,7 @@ class nutrient_analyzer (mask_areas):
     
     
 imageName = str(input("Enter image name (include .jpg): "))
-image_dir = 'C:\\Daniel\\Python\\Nutrition YOLO\\Training_files\\Raw_imgs\\' + imageName
+image_dir = 'Training_files\\Raw_imgs\\' + imageName
 nutrient_analyzer = nutrient_analyzer(model, image_dir)
 
 #filter = filter()

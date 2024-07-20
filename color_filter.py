@@ -37,5 +37,5 @@ class filter:
 
 if __name__ == "__main__":
     filter = filter()
-    filter.saturate('C:\\Daniel\\Python\\Nutrition YOLO\\Training_files\\Raw_imgs\\banana2.jpg')
+    filter.saturate('Training_files\\Raw_imgs\\banana2.jpg')
     
